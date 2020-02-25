@@ -1,0 +1,122 @@
+.info{
+    background-color:#000;
+    .info-body{
+        @include  flex($row,space-around,$colCent);
+        color: #fff;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        @media(max-width: 992px){
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            }
+            @media(max-width: 567px){
+                 margin-left: 70px;
+    
+                }
+        .info-exp{
+            @include  flex($col,space-around,none);
+            line-height: 45px;
+            @media(max-width: 1200px){
+                line-height: 35px;
+                letter-spacing: 0;
+                }
+            &__under-title{
+                @include fonts($fz+10px,$fc);
+                text-transform: uppercase;
+                font-weight: bold; 
+                @media(max-width: 1200px){
+                @include fonts($fz+5px,$fc);
+                }
+            }
+            &__sub-title{
+                @include fonts($fz+30px,#fff);
+                @media(max-width: 1200px){
+                    @include fonts($fz+15px,#fff);
+                    }
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 3px;
+                span{
+                    @include fonts($fz+30px,$fc);
+                    display: inline;
+                    font-weight: bold;
+                    @media(max-width: 1200px){
+                        @include fonts($fz+15px,$fc);
+                        }
+                }
+            }
+            &__text{
+                @include fonts($fz +2px,#fff);
+                max-width: 400px;
+                line-height: 27px;
+                margin-top: 30px;
+                position: relative;
+                @media(max-width: 1200px){
+                    @include fonts(16px,#fff);
+                    }
+                    @media(max-width: 576px){
+                        @include fonts(13px,#fff);
+                        max-width: 200px;
+                        }
+                &:before{
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 0;
+                    width: 2px;
+                    height: 100%;
+                    background-color: #08d665;
+                }
+            }
+        }
+        .info-card{
+            @include  flex($row,$rowCent,flex-start);
+            justify-content: space-around;
+            margin-top: 40px;
+            padding: 15px;
+            @media(max-width: 768px){
+                @include  flex($col,$rowCent,none);
+                margin-top: 20px;
+                    }
+            &__exp{
+                height: auto;
+                flex: 1 1 0;
+                padding: 25px;
+                margin: 10px 15px;
+                line-height: 25px;
+                transition:  .5s;
+                background-color: #080808;
+                @media(max-width: 768px){
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 15px;   
+                    text-align: center;  
+                        }
+                        @media(max-width: 576px){
+                            max-width: 200px;
+                            width: 100%;
+                                }
+               
+                &:hover{
+                    transform: translate3d(0,-15px,0);
+                    background-color: #181818;
+                    box-shadow: 0px 65px 64.5px rgba(0,0,0,0.39);
+                }
+            }
+            &__title{
+                @include fonts(16px,#fff);
+                text-align: center;
+            }
+            &__sub-title{
+                @include fonts($fz+2px,#08d665);
+                font-weight: bold;
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: $margin-base;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

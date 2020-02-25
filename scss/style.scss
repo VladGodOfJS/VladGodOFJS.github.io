@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap');
+@import url('_animate.scss');
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "main";
+@import "info";
+@import "footer";
+
+.container {
+    @include container;
+    @media(max-width: 1170px){
+        max-width: 970px;
+    }
+    @media(max-width: 992px){
+        max-width: 750px;
+    }
+    @media(max-width: 750px){
+        max-width:none;
+    }
+} 
+
+

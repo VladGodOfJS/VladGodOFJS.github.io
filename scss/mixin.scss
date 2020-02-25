@@ -1,0 +1,27 @@
+
+@mixin container {
+    margin: 0 auto;
+    max-width: $w;
+    height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    font-family: $ff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin fonts($fz,$fc){
+    font-size: $fz;
+    color: $fc;
+    font-family:$ff;
+    font-weight:$fw;
+}
+
+@mixin flex($row,$rowCent,$colCent) {
+    display: $flex;
+    flex-direction: $row;
+    justify-content: $rowCent;
+    align-items: $colCent;
+}
